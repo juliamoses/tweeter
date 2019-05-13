@@ -1,3 +1,6 @@
+/*
+ * top navigation bar
+ */
 #nav-bar {
 	position: fixed;
 	top: 0;
@@ -9,6 +12,9 @@
 	height: 80px;
 }
 
+/*
+ * tweeter image
+ */
 #nav-bar .logo {
 	width: 80px; 
 	height: 80px;
@@ -16,6 +22,9 @@
 	margin-right: 10px
 }
 
+/*
+ * tweeter name
+ */
 #nav-bar .header {
 	float: left;
 	font-size: 40px;
