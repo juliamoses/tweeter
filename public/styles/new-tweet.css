@@ -1,16 +1,60 @@
+/*
+ * compose tweet
+ */
+
 .new-tweet {
 	background-color: #DCDCDC;
 	border-radius: 15px;
-    padding: 0.5em;
+    padding-right: 2em;
+    padding-left: 2em;
     width: 80%;
-    height: 10em;
+    height: 12em;
     margin: auto;
-    
 }
 
+/*
+ * text form
+ */
 
-/*textarea.text {
+.new-tweet textarea {
 	padding: 1em;
+	display: block;
+	width: 70%;
 }
-*/
+
+
+/*
+ * counter
+ */
+
+ footer .counter {
+ 	float: right;
+ 	line-height: 4.5;
+ }
+
+
+/*
+ * for black line
+ */
+
+.new-tweet h2 {
+	border-bottom: 2px solid black;
+	line-height: 1.5;
+	padding-top: 2%;
+}
+
+/*
+ * for tweet button
+ */
+
+footer input {
+	margin-top: 2%;
+}
+
+
+
+
+
+
+
 
