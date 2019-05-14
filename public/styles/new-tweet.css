@@ -52,7 +52,13 @@ footer input {
 }
 
 
-
+/*
+ * for red counter colour
+ */
+.invalid {
+	color: #e50b0b;
+	font-style: italic;
+}
 
 
 
