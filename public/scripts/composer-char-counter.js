@@ -1,4 +1,8 @@
 $(document).ready(function() {
-  // --- our code goes here ---
-  
+  const maxValue = $('.counter').text();
+
+  $("#btn").on('input', function() {
+    const counter = $(this).val().length;
+     $('.counter').text(maxValue - counter);
+});
 });
