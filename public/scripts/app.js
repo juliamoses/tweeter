@@ -8,8 +8,41 @@ function createTweetElement(tweet) {
   const {user, content, created_at} = tweetData;
   const {name, avatars, handle} = user;
   const {text} = content;
+  const src = avatars.regular;
   const $tweet = $('<article>').addClass('tweet');
+
+
+  //DOM structure creation
+  $header = $('<header>');
+  $avatar = $('img class="avatar"').attr('src', src);;
+  $name = $('<h2>').text(name);
+  $handle = $('<p>').text(handle);
+  $tweetContent = $('<p>').text(text);
+  $footer = $('<footer>');
+  $date = $('<p>').text(moment().subtract(1, 'days').calendar());
+  $likes = $('<div> class="likes"')
+  $explore = $('img').attr('src', "/images/explore.png");
+  $favorite= $('img').attr('src', "/images/favorite.png");
+  $language = $('img').attr('src', "/images/language.png");
+
+
+  //appending DOM elements
+  $header.append($avatar);
+  $header.append($name);
+  $header.append($handle);
+  $footer.append($likes);
+  $likes.append($explore);
+  $likes.append($favorite);
+  $likes.append($language);
+  $tweet.append($header);
+  $tweet.append($tweetContent);
+  $tweet.append($footer);
+
+  return $tweet;
+
 }
+
+
 
 
 
@@ -34,5 +67,10 @@ var $tweet = createTweetElement(tweetData);
 
 // Test / driver code (temporary)
 console.log($tweet); // to see what it looks like
-$('#tweets-container').append($tweet); // to add it to the page
-//so we can make sure it's got all the right elements, classes, etc.
+$('#tweets-container').append($tweet); // to add it to the page so
+//we can make sure it's got all the right elements, classes, etc.
+
+
+
+
+
