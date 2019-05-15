@@ -107,20 +107,29 @@ function createTweetElement(tweet) {
 
 function postRequest(){
   $("form").on("submit", function(event) {
+  	const textarea = $("textarea");
     event.preventDefault()
+  
+    if(!textarea.val()) {
+    	alert("no words");
+    } else if(textarea.val().length > 140) {
+    	alert("too much")
+    } else{
 
-    //ajax post request to submit form
-    $.ajax({
-      type: "POST",
-      url: '/tweets',
-      data: $(this).serialize(),
-      // success: success,
-      // dataType: dataType
-    }).done(function() {
-	  console.log("post request");
-    })
+      //ajax post request to submit form
+      $.ajax({
+        type: "POST",
+        url: '/tweets',
+        data: $(this).serialize(),
+        // success: success,
+        // dataType: dataType
+      }).done(function() {
+	    console.log("post request");
+      })
+    }
   })
 }
+
 postRequest();
 
 
