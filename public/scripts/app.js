@@ -3,7 +3,7 @@ $(document).ready(function() {
 
 
 
-
+//hardcoded user data
 const data = [
   {
     "user": {
@@ -80,7 +80,7 @@ function createTweetElement(tweet) {
   $handle = $('<p>').text(handle);
   $tweetContent = $('<p>').text(text);
   $footer = $('<footer>');
-  $date = $('<p>').text(moment().subtract(1, 'days').calendar());
+  $date = $('<p>').text(moment().calendar());
   $likes = $('<div>').addClass('likes');
   $explore = $('<img>').attr('src', "/images/explore.png");
   $favorite= $('<img>').attr('src', "/images/favorite.png");
@@ -103,6 +103,42 @@ function createTweetElement(tweet) {
   return $tweet;
 
 }
+
+
+function postRequest(){
+  $("form").on("submit", function(event) {
+    event.preventDefault()
+
+    //ajax post request to submit form
+    $.ajax({
+      type: "POST",
+      url: '/tweets',
+      data: $(this).serialize(),
+      // success: success,
+      // dataType: dataType
+    }).done(function() {
+	  console.log("post request");
+    })
+  })
+}
+postRequest();
+
+
+
+//ajax get request to submit form
+const loadTweets = () => $.ajax({
+	type: 'GET',
+	url: '/tweets',
+	dataType: 'json'
+}).done(function (response) {
+  renderTweets(response);
+})
+
+loadTweets();
+
+
+
+
 
 
 

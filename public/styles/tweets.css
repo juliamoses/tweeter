@@ -59,8 +59,7 @@ article.tweet:hover h2 {
 
 article.tweet header p {
   float: right;
-  display: inline;
-  line-height: 1;
+  line-height: 0;
 }
 
 
