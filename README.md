@@ -15,3 +15,10 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+
+
+
+
+!["main page"](link to pictures)
+!["composing"](link to pictures)
+!["hover"](link to pictures)
