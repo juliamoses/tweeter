@@ -3,13 +3,14 @@
  */
 
 .new-tweet {
-	background-color: #DCDCDC;
-	border-radius: 15px;
-    padding-right: 2em;
-    padding-left: 2em;
-    width: 80%;
-    height: 12em;
-    margin: auto;
+  background-color: #DCDCDC;
+  border-radius: 15px;
+  padding-right: 2em;
+  padding-left: 2em;
+  width: 80%;
+  height: 12em;
+  margin: auto;
+  display: none;
 }
 
 /*
@@ -17,10 +18,10 @@
  */
 
 .new-tweet textarea {
-	padding: 1em;
-	display: block;
-	width: 70%;
-	resize: none;
+  padding: 1em;
+  display: block;
+  width: 70%;
+  resize: none;
 }
 
 
@@ -29,8 +30,8 @@
  */
 
  footer .counter {
- 	float: right;
- 	line-height: 4.5;
+   float: right;
+   line-height: 4.5;
  }
 
 
@@ -39,9 +40,9 @@
  */
 
 .new-tweet h2 {
-	border-bottom: 2px solid black;
-	line-height: 1.5;
-	padding-top: 2%;
+  border-bottom: 2px solid black;
+  line-height: 1.5;
+  padding-top: 2%;
 }
 
 /*
@@ -49,7 +50,8 @@
  */
 
 footer input {
-	margin-top: 2%;
+  margin-top: 2%;
+  border-radius: 5px;
 }
 
 
@@ -57,9 +59,23 @@ footer input {
  * for red counter colour
  */
 .invalid {
-	color: #e50b0b;
-	font-style: italic;
+  color: #e50b0b;
+  font-style: italic;
 }
+
+
+/*
+ * for error 
+ */
+
+.new-tweet .errorMessage {
+  color: #db3b43;
+  font-size: 20px;
+}
+
+
+
+
 
 
 

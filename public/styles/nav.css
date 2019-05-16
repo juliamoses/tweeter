@@ -2,12 +2,12 @@
  * top navigation bar
  */
 #nav-bar {
-	position: fixed;
-	top: 0;
-	background-color: #00a087;
-	color: #e8fdff;
-	padding-left: 2em;
-	padding-right: 2em;
+  position: fixed;
+  top: 0;
+  background-color: #00a087;
+  color: #e8fdff;
+  padding-left: 2em;
+  padding-right: 2em;
 	width: 100vw;
 	height: 80px;
 }
@@ -30,3 +30,35 @@
 	font-size: 40px;
 	line-height:2;
 }
+
+
+/*
+ * compose button
+ */
+#nav-bar .compose {
+	height: 60px;
+	width: 90px;
+	border-radius: 10px;
+	border: 3px solid #269985;
+	background-color: #76f7e1;
+	float: right;
+	margin: 0.5rem 2rem 0.5rem 0rem;
+	padding: 1rem;
+}
+
+
+#nav-bar .compose:hover {
+  background-color: #fff; 
+  color: #000;
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,5 +1,4 @@
 $(document).ready(function() {
-	$('textarea').focus();
 
 
 
@@ -54,15 +53,24 @@ const data = [
 
 
 
+
+
+//to hide and show compose button
+$( ".compose" ).click(function() {
+  $( ".new-tweet" ).slideToggle( "slow", function() {
+    $('textarea').focus();
+  });
+});
+
+
 //takes in tweet object, appends to the tweet container
 function renderTweets(tweets) {
-  for(tweet of tweets) {
+  for (tweet of tweets) {
   	let $tweet = createTweetElement(tweet)
   	console.log($tweet);
   	$('#tweet-container').prepend($tweet);
   }
 }
-
 
 
 function createTweetElement(tweet) {
@@ -88,43 +96,43 @@ function createTweetElement(tweet) {
 
 
   //appending DOM elements
-  $header.append($avatar);
-  $header.append($name);
-  $header.append($handle);
-  $footer.append($likes);
-  $footer.append($date);
-  $likes.append($explore);
-  $likes.append($favorite);
-  $likes.append($language);
-  $tweet.append($header);
-  $tweet.append($tweetContent);
-  $tweet.append($footer);
+  $header.append($avatar, $name, $handle);
+  $footer.append($likes, $date);
+  $likes.append($explore, $favorite, $language);
+  $tweet.append($header, $tweetContent, $footer);
 
   return $tweet;
 
 }
 
 
-function postRequest(){
+// const postRequest = (event) => {
+// 	event.preventDefault()
+
+const postRequest = () => {
   $("form").on("submit", function(event) {
-  	const textarea = $("textarea");
     event.preventDefault()
   
-    if(!textarea.val()) {
-    	alert("no words");
-    } else if(textarea.val().length > 140) {
-    	alert("too much")
-    } else{
+		if(!$('textarea', this).val()){
+			$('.errorMessage').slideDown('slow');
+			$('.errorMessage').text('please create a tweet!');
+			return;
+		} else if($('textarea', this).val().length > 140) {
+			$('.errorMessage').slideDown('slow');
+			$('.errorMessage').text('whoa! too much tweet')
+			return;
+		} else{
 
       //ajax post request to submit form
       $.ajax({
         type: "POST",
         url: '/tweets',
         data: $(this).serialize(),
-        // success: success,
-        // dataType: dataType
       }).done(function() {
-	    console.log("post request");
+		  $("textarea").val("");
+		  updateCharacterCounter();
+		  loadTweets();
+		  console.log("post complete");
       })
     }
   })
@@ -144,11 +152,6 @@ const loadTweets = () => $.ajax({
 })
 
 loadTweets();
-
-
-
-
-
 
 
 renderTweets(data);
