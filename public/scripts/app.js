@@ -35,14 +35,14 @@ function createTweetElement(tweet) {
   $footer = $('<footer>');
   $date = $('<p>').text(moment().calendar());
   $likes = $('<div>').addClass('likes');
-  $explore = $('<img>').attr('src', '/images/explore.png');
-  $favorite= $('<img>').attr('src', '/images/favorite.png');
+  $favorite = $('<img>').attr('src', '/images/favorite.png');
+  $explore= $('<img>').attr('src', '/images/explore.png');
   $language = $('<img>').attr('src', '/images/language.png');
 
   //appending DOM elements
   $header.append($avatar, $name, $handle);
   $footer.append($likes, $date);
-  $likes.append($explore, $favorite, $language);
+  $likes.append($favorite, $explore, $language);
   $tweet.append($header, $tweetContent, $footer);
 
   return $tweet;
