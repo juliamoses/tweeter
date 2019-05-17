@@ -24,7 +24,7 @@ module.exports = function(DataHelpers) {
     }
 
     const user = req.body.user ? req.body.user : await userHelper.generateRandomUser();
-    console.log("user: ", user)
+    
     const tweet = {
       user: user,
       content: {

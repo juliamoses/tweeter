@@ -13,7 +13,6 @@ $( '.compose' ).click(function() {
 function renderTweets(tweets) {
   for (tweet of tweets) {
   	let $tweet = createTweetElement(tweet);
-  	console.log($tweet);
   	$('#tweet-container').prepend($tweet);
   }
 }
@@ -74,7 +73,6 @@ const postRequest = () => {
 		  $('textarea').val('');
 		  updateCharacterCounter();
 		  loadTweets();
-		  console.log('post complete');
       })
     }
   })

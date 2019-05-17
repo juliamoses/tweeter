@@ -6,28 +6,45 @@
   width: 80%;
   height: 12em;
   margin: auto;
-  display: none; }
-  .new-tweet textarea {
-    padding: 1em;
-    display: block;
-    width: 100%;
-    resize: none; }
-  .new-tweet h2 {
-    border-bottom: 2px solid black;
-    line-height: 1.5;
-    padding-top: 2%; }
-  .new-tweet .errorMessage {
-    color: #B00020;
-    font-size: 20px; }
+  display: none;
+}
+
+
+.new-tweet textarea {
+  padding: 1em;
+  display: block;
+  width: 100%;
+  resize: none;
+}
+
+
+.new-tweet h2 {
+  border-bottom: 2px solid black;
+  line-height: 1.5;
+  padding-top: 2%;
+}
+
+
+.new-tweet .errorMessage {
+  color: #B00020;
+  font-size: 20px;
+}
+
 
 footer .counter {
-  float: right;
-  line-height: 4.5; }
+float: right;
+line-height: 4.5;
+}
+
 
 footer input {
-  margin-top: 2%;
-  border-radius: 5px; }
+margin-top: 2%;
+border-radius: 5px;
+}
+
 
 .invalid {
-  color: #e50b0b;
-  font-style: italic; }
+color: #e50b0b;
+font-style: italic;
+}
+

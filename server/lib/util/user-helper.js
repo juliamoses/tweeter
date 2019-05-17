@@ -3,7 +3,6 @@
 const Chance = require("chance");
 const chance = new Chance();
 
-//const md5 = require('md5');
 var axios = require('axios');
 
 
@@ -32,16 +31,12 @@ module.exports = {
 
     const newUser = (await axios.get('https://randomuser.me/api/')).data.results[0]
 
-    // const avatarUrlPrefix = `'https://randomuser.me/api/${md5(userHandle)}`;
-    //https://vanillicon.com/
-
     const avatars = {
       small:   newUser.picture.large,
       regular: newUser.picture.medium,
       large:   newUser.picture.thumbnail,
     }
-    console.log(avatars)
-    console.log(newUser)
+   
 
     return {
       name: userName,
