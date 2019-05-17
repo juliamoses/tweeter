@@ -94,7 +94,6 @@ const loadTweets = () => $.ajax({
 loadTweets();
 
 
-
 });
 
 
