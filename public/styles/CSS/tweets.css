@@ -1,9 +1,9 @@
 #tweet-container {
-	width: 600px;
-	margin: 0 auto;
-	margin-top: 30px;
-	height: 1000000px;
-	background-color: #fff;
+  width: 40rem;
+  margin: 0 auto;
+  margin-top: 30px;
+  height: 1000000px;
+  background-color: #fff;
 }
 
 
@@ -20,12 +20,12 @@ article.tweet {
 
 
 article.tweet:hover {
-	border-color: #000000; 
+  border-color: #000000; 
 }
 
 
 article.tweet header {
-  background-color: #F5F5F5;
+  background-color: #ffcccb;
   border-radius: 15px 15px 0px 0px;
   height: 5rem;
   padding: 0.5rem;
@@ -64,7 +64,7 @@ article.tweet header p {
 
 
 article.tweet p {
-	padding: 1rem;
+  padding: 1rem;
 }
 
 
@@ -76,7 +76,7 @@ article.tweet:hover p {
 
 article.tweet footer {
   border-top: 1px solid #C8C8C8;
-  background-color: #F5F5F5;
+  background-color: #ffcccb;
   width: 100%;
   border-radius: 0px 0px 15px 15px;
   height: 2.5rem;
@@ -96,11 +96,3 @@ div.likes {
 article.tweet:hover div.likes {
   visibility: visible;
 }
-
-
-
-
-
-
-
-

@@ -1,0 +1,22 @@
+html {
+	box-sizing: border-box;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+body {
+	margin: 0;
+	color: #244751;
+	background-color: #eee;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+main {
+	&.container {
+		width: 40rem;
+		margin: 0 auto;
+		margin-top: 1rem;
+		height: 1000000rem;
+		background-color: #FFFFFF;
+		padding-top: 5rem;
+	}
+}

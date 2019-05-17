@@ -4,7 +4,7 @@
 #nav-bar {
   position: fixed;
   top: 0;
-  background-color: #00a087;
+  background-color: #ba6b6c;
   color: #e8fdff;
   padding-left: 2em;
   padding-right: 2em;
@@ -19,7 +19,8 @@
 	width: 80px; 
 	height: 80px;
 	float: left;
-	margin-right: 10px
+	margin-right: 10px;
+	color: #fffde7;
 }
 
 /*
@@ -29,6 +30,7 @@
 	float: left;
 	font-size: 40px;
 	line-height:2;
+	color: #fffde7;
 }
 
 
@@ -39,16 +41,17 @@
 	height: 60px;
 	width: 90px;
 	border-radius: 10px;
-	border: 3px solid #269985;
-	background-color: #76f7e1;
+	border: 3px solid #cccab5;
+	background-color: #ef9a9a;
 	float: right;
 	margin: 0.5rem 2rem 0.5rem 0rem;
 	padding: 1rem;
+	color: #fffde7;
 }
 
 
 #nav-bar .compose:hover {
-  background-color: #fff; 
+  background-color: #995758; 
   color: #000;
 }
 

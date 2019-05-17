@@ -3,7 +3,7 @@
  */
 
 .new-tweet {
-  background-color: #DCDCDC;
+  background-color: #ef9a9a;
   border-radius: 15px;
   padding-right: 2em;
   padding-left: 2em;
@@ -20,7 +20,7 @@
 .new-tweet textarea {
   padding: 1em;
   display: block;
-  width: 70%;
+  width: 100%;
   resize: none;
 }
 
@@ -69,7 +69,7 @@ footer input {
  */
 
 .new-tweet .errorMessage {
-  color: #db3b43;
+  color: #B00020;
   font-size: 20px;
 }
 
