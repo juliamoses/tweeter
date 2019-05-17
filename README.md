@@ -1,6 +1,8 @@
 # Tweeter Project
 
-Tweeter is a simple, single-page Twitter clone for composing and sharing tweets. I built it using HTML, CSS, SASS, JS, jQuery and AJAX on the front-end, and Node, Express and MongoDB on the back-end. I used the app Moment to keep track of the date and times when each tweet is posted, along with Randomuser.me to generate new random avatars for each user.
+Tweeter is a simple, single-page Twitter clone for composing and sharing tweets. 
+I built it using HTML, CSS, SASS, JS, jQuery and AJAX on the front-end, and Node, Express and MongoDB on the back-end.
+I used the app Moment to keep track of the date and times when each tweet is posted, along with Randomuser.me to generate new random avatars for each user.
 
 
 ## Getting Started
