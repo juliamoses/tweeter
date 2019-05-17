@@ -20,6 +20,6 @@ This repository is the starter code for the project: Students will fork and clon
 
 
 
-!["main page"](link to pictures)
-!["composing"](link to pictures)
-!["hover"](link to pictures)
+!["Tweeter main page"](https://github.com/juliamoses/tweeter/blob/master/docs/tweeter-main.png)
+!["Tweeter counter"](https://github.com/juliamoses/tweeter/blob/master/docs/tweet-counter.png)
+!["Tweeter error"](https://github.com/juliamoses/tweeter/blob/master/docs/tweet-error.png)
