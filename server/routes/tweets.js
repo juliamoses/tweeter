@@ -17,13 +17,14 @@ module.exports = function(DataHelpers) {
     });
   });
 
-  tweetsRoutes.post("/", function(req, res) {
+  tweetsRoutes.post("/", async function(req, res) {
     if (!req.body.text) {
       res.status(400).json({ error: 'invalid request: no data in POST body'});
       return;
     }
 
-    const user = req.body.user ? req.body.user : userHelper.generateRandomUser();
+    const user = req.body.user ? req.body.user : await userHelper.generateRandomUser();
+    console.log("user: ", user)
     const tweet = {
       user: user,
       content: {

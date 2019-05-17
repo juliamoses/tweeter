@@ -3,12 +3,13 @@
 const Chance = require("chance");
 const chance = new Chance();
 
-// const md5 = require('md5');
-var moment = require('moment');
+//const md5 = require('md5');
+var axios = require('axios');
+
 
 module.exports = {
 
-  generateRandomUser: () => {
+  generateRandomUser: async () => {
     const gender    = chance.gender();
     const firstName = chance.first({gender: gender});
     const lastName  = chance.last();
@@ -28,13 +29,19 @@ module.exports = {
       userHandle += suffix;
     }
 
-    const avatarUrlPrefix = `https://randomuser.me/api/${md5(userHandle)}`;
+
+    const newUser = (await axios.get('https://randomuser.me/api/')).data.results[0]
+
+    // const avatarUrlPrefix = `'https://randomuser.me/api/${md5(userHandle)}`;
+    //https://vanillicon.com/
 
     const avatars = {
-      small:   `${avatarUrlPrefix}_50.png`,
-      regular: `${avatarUrlPrefix}.png`,
-      large:   `${avatarUrlPrefix}_200.png`
+      small:   newUser.picture.large,
+      regular: newUser.picture.medium,
+      large:   newUser.picture.thumbnail,
     }
+    console.log(avatars)
+    console.log(newUser)
 
     return {
       name: userName,

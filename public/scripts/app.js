@@ -23,7 +23,7 @@ function createTweetElement(tweet) {
   const {user, content, created_at} = tweet;
   const {name, avatars, handle} = user;
   const {text} = content;
-  const src = avatars.regular;
+  const src = typeof(avatars) !== "undefined" ? avatars.regular : "";
   const $tweet = $('<article>').addClass('tweet');
 
   //DOM structure creation
