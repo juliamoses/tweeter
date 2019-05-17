@@ -3,7 +3,8 @@
 const Chance = require("chance");
 const chance = new Chance();
 
-const md5 = require('md5');
+// const md5 = require('md5');
+var moment = require('moment');
 
 module.exports = {
 
@@ -27,7 +28,8 @@ module.exports = {
       userHandle += suffix;
     }
 
-    const avatarUrlPrefix = `https://vanillicon.com/${md5(userHandle)}`;
+    const avatarUrlPrefix = `https://randomuser.me/api/${md5(userHandle)}`;
+
     const avatars = {
       small:   `${avatarUrlPrefix}_50.png`,
       regular: `${avatarUrlPrefix}.png`,
