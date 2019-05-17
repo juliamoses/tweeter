@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- for media queries -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
 
@@ -11,16 +14,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,700,700i"  type="text/css" />
 
     <!-- App CSS -->
-    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/CSS/layout.css" type="text/css" />
 
     <!-- App CSS -->
-    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/CSS/nav.css" type="text/css" />
 
     <!-- App CSS -->
-    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/CSS/new-tweet.css" type="text/css" />
 
     <!-- App CSS -->
-    <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/CSS/tweets.css" type="text/css" />
 
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
@@ -47,7 +50,7 @@
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form action="/tweets" method="POST">
-          <textarea id="btn" name="text" placeholder="What are you humming about?"></textarea>
+          <textarea id="composeText" name="text" placeholder="What are you humming about?"></textarea>
           <footer>
             <input type="submit" value="Tweet">
             <span class="counter">140</span>
