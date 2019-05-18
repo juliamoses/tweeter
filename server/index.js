@@ -1,7 +1,8 @@
 "use strict";
 
+require('dotenv').config();
 // Basic express setup:
-const PORT          = 8080;
+const PORT          = process.env.PORT || 8080;
 const express       = require("express");
 const bodyParser    = require("body-parser");
 const app           = express();
@@ -11,15 +12,13 @@ app.use(express.static("public"));
 
 //connecting to Mongo
 const MongoClient = require("mongodb").MongoClient;
-const MONGODB_URI = "mongodb://localhost:27017/tweeter";
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost:27017/tweeter";
 
 MongoClient.connect(MONGODB_URI, (err, db) => {
   if (err) {
     console.error(`Failed to connect: ${MONGODB_URI}`);
     throw err;
   }
-
-
 
 // require db and pass immediately:
 const DataHelpers = require("./lib/data-helpers.js")(db);
