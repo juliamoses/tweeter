@@ -32,7 +32,7 @@ function createTweetElement(tweet) {
   $handle = $('<p>').text(handle);
   $tweetContent = $('<p>').text(text);
   $footer = $('<footer>');
-  $date = $('<p>').text(moment().calendar());
+  $date = $('<p>').text(moment(created_at).calendar());
   $likes = $('<div>').addClass('likes');
   $favorite = $('<img>').attr('src', '/images/favorite.png');
   $explore= $('<img>').attr('src', '/images/explore.png');
@@ -72,6 +72,7 @@ const postRequest = () => {
       }).done(function() {
 		  $('textarea').val('');
 		  updateCharacterCounter();
+      $('#tweet-container').empty();
 		  loadTweets();
       })
     }
