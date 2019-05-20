@@ -1,6 +1,5 @@
 .new-tweet {
   background-color: #ef9a9a;
-  word-wrap: break-word;
   border-radius: 15px;
   padding-right: 2em;
   padding-left: 2em;
@@ -13,6 +12,7 @@
     display: block;
     width: 100%;
     resize: none;
+    word-wrap: break-word;
   }
   h2 {
     border-bottom: 2px solid black;

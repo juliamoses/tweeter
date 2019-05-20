@@ -5,6 +5,7 @@
   background-color: #fff; }
 
 article.tweet {
+  word-wrap: break-word;
   border: 1px solid #C8C8C8;
   border-radius: 15px;
   width: 80%;
