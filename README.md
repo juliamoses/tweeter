@@ -21,7 +21,6 @@ I built it using HTML, CSS, SASS, JS, jQuery and AJAX on the front-end, and Node
 - Moment.js
 
 
-
 !["Tweeter main page"](https://github.com/juliamoses/tweeter/blob/master/docs/tweeter-main.png?raw=true)
 !["Tweeter counter"](https://github.com/juliamoses/tweeter/blob/master/docs/tweet-counter.png?raw=true)
 !["Tweeter error"](https://github.com/juliamoses/tweeter/blob/master/docs/tweet-error.png?raw=true)
